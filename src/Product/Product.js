@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default function Product({product}) {
+export default function Product({product, deleteProduct}) {
     return (
         <div>
             <div className="card m-3">
@@ -8,17 +9,18 @@ export default function Product({product}) {
                     <h5 className='text-center ' >{product.name}</h5>
                 </div>
                 <div className="card-body">
-                    <p className='lead'>Manufacturer: {product.manufacturer.name}</p>
-                    <p className='lead'>Expiry Date: {product.expiryDate}</p>
-                    <p className='lead'>Price: {product.price} eura</p>
+                    <p className='lead'>Manufacturer: <b>{product.manufacturer.name}</b></p>
+                    <p className='lead'>Expiry Date: <b>{product.expiryDate}</b> </p>
+                    <p className='lead'>Price: <b>{product.price} eura</b></p>
                 </div>
+                
                 <div className="card-body">
                     <div className="row">
                         <div className="col-6">
-                            <button className='btn btn-info btn-sm'> Edit product </button>
+                            <Link to={'/edit/' + product.id} className='btn btn-info btn-sm'> Edit product </Link>
                         </div>
                         <div className="col-6 text-end">
-                            <button className='btn btn-danger btn-sm '>Delete</button>
+                            <button onClick={()=>{deleteProduct(product.id)}} className='btn btn-danger btn-sm '>Delete</button>
                         </div>
                     </div>
                 </div>

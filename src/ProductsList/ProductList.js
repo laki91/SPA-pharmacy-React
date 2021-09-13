@@ -1,14 +1,14 @@
 import React from 'react'
 import Product from '../Product/Product';
 
-export default function ProductList({products}) {
+export default function ProductList({products, deleteProduct}) {
 
     console.log(products);
 
     const all = products.map(product=> {
         return (
             <div className="col-4" key={product.id}>
-                <Product product={product} />
+                <Product product={product} deleteProduct={deleteProduct} />
             </div>
         )
     })
