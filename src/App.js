@@ -29,10 +29,10 @@ export default function App() {
   }
 
   const editProductToState = (arg) => {
-    console.log(arg);
-    // let possition = products.map(prod => prod.id).indexOf(arg.id)
-    // products[possition] = arg
-    // setProducts(products)
+    //console.log(arg);
+    let possition = products.map(prod => prod.id).indexOf(arg.id)
+    products[possition] = arg
+    setProducts(products)
   }
 
   return (
@@ -45,7 +45,7 @@ export default function App() {
       <Route path='/add'>
         <AddProduct addProduct={addProduct} />
       </Route>
-      <Route to='/edit/:id'>
+      <Route path='/edit/:id'>
         <EditProduct products={products} editProductToState={editProductToState} />
       </Route>
       </Switch>
