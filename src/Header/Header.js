@@ -6,9 +6,10 @@ export default function Header() {
     return (
         <>
             <nav id='sidebar' className='' >
-                <NavLink className='nav-link' to='/' >Products</NavLink>
-                <NavLink className='nav-link' to='/about' >About</NavLink>
-                <NavLink className='nav-link' to='/add' >Add</NavLink>
+                <NavLink exact activeClassName={'activeLink'} className='nav-link' to='/' >Products</NavLink>
+                <NavLink activeClassName={'activeLink'} className='nav-link' to='/about'>About</NavLink>
+                <NavLink activeClassName={'activeLink'} className='nav-link' to='/add' >Add</NavLink>
+                <NavLink activeClassName={'activeLink'} className='nav-link' to='/statistics'>Statistics</NavLink>
             </nav>
         </>
     )

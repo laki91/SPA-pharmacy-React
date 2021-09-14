@@ -1,0 +1,13 @@
+.card {
+    transition: transform .2s;
+    background-color: rgb(196, 203, 209);
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.par {
+    font-size: 17px;
+    margin-top: 10px;
+}

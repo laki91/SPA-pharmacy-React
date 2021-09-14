@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from '../Product/Product';
+import './ProductList.css'
 
 export default function ProductList({products, deleteProduct}) {
 

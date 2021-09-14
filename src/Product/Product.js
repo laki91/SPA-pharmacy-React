@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './Product.css'
 
 export default function Product({product, deleteProduct}) {
     return (
@@ -9,9 +10,9 @@ export default function Product({product, deleteProduct}) {
                     <h5 className='text-center ' >{product.name}</h5>
                 </div>
                 <div className="card-body">
-                    <p className='lead'>Manufacturer: <b>{product.manufacturer.name}</b></p>
-                    <p className='lead'>Expiry Date: <b>{product.expiryDate}</b> </p>
-                    <p className='lead'>Price: <b>{product.price} eura</b></p>
+                    <p className='par '>Manufacturer: <b>{product.manufacturer.name}</b></p>
+                    <p className='par '>Expiry Date: <b>{product.expiryDate}</b> </p>
+                    <p className='par '>Price: <b>{product.price} eura</b></p>
                 </div>
                 
                 <div className="card-body">
