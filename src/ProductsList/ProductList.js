@@ -8,7 +8,7 @@ export default function ProductList({products, deleteProduct}) {
 
     const all = products.map(product=> {
         return (
-            <div className="col-4" key={product.id}>
+            <div className="col-xl-4 col-md-6 col-12" key={product.id}>
                 <Product product={product} deleteProduct={deleteProduct} />
             </div>
         )

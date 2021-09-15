@@ -13,12 +13,21 @@ export default function BarChart({products}) {
         return '#'+col;
     }
 
+    const enf = []
+    products.forEach(prod => enf.push(prod.name))
+    //console.log(enf);
+
     const arr = []
     products.forEach(prod => arr.push(prod.price))
+    //console.log(arr);
+
+    // const brg = []
+    // enf.forEach((key, i)=> brg[key] = arr[i])
+    // console.log(brg);
     
     const state = {
-        labels: products.map(prod => prod.name).slice(0,5),
-
+        labels: enf,
+        // labels: Object.keys(brg),
         datasets: [
             {
                 label: 'Rainfall',
@@ -26,6 +35,8 @@ export default function BarChart({products}) {
                 borderColor: 'rgba(0,0,0,1)',
                 borderWidth: 2,
                 data: arr
+                // data: Object.values(brg)
+                
             }
         ]
     }

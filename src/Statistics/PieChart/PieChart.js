@@ -18,7 +18,7 @@ export default function PieChart({products}) {
     products.forEach(prod => all.push(prod.manufacturer.name))
     
     
-    var count = [];
+    let count = [];
     all.forEach((el) => {
      count[el] = (count[el]||0) + 1;
     });

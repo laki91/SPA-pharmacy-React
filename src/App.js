@@ -11,13 +11,13 @@ import AboutApp from './AboutApp/AboutApp'
 export default function App() {
 
   const [products, setProducts] = useState([
-    {id: 1, name: 'Panklav', manufacturer: {id: 1, name: 'Hemofarm'}, price: '130', expiryDate: '01-05-2022' },
-    {id: 2, name: 'Strepsils', manufacturer: {id: 2, name: 'Bayer'}, price: '20', expiryDate: '12-09-2023' },
-    {id: 3, name: 'Probiotik', manufacturer: {id: 3, name: 'Torlak'}, price: '10', expiryDate: '05-07-2026' },
-    {id: 4, name: 'Smecta', manufacturer: {id: 4, name: 'Pfizer'}, price: '15', expiryDate: '08-04-2027' },
-    {id: 5, name: 'Penicilin', manufacturer: {id: 5, name: 'Hemofarm'}, price: '24', expiryDate: '01-05-2022' },
-    {id: 6, name: 'Ovarzil', manufacturer: {id: 6, name: 'Hemofarm'}, price: '53', expiryDate: '01-08-2022' },
-    {id: 7, name: 'Propolis', manufacturer: {id: 7, name: 'Moderna'}, price: '23', expiryDate: '11-08-2024' },
+    {name: 'Panklav', manufacturer: {id: 1, name: 'Hemofarm'}, price: '100', expiryDate: '01-05-2022',id: 1 },
+    {name: 'Strepsils', manufacturer: {id: 2, name: 'Bayer'}, price: '20', expiryDate: '12-09-2023',id: 2 },
+    {name: 'Probiotik', manufacturer: {id: 3, name: 'Torlak'}, price: '10', expiryDate: '05-07-2026', id: 3 },
+    {name: 'Smecta', manufacturer: {id: 4, name: 'Pfizer'}, price: '15', expiryDate: '08-04-2027', id: 4  },
+    {name: 'Palitreks', manufacturer: {id: 5, name: 'Hemofarm'}, price: '24', expiryDate: '01-05-2022', id: 5 },
+    {name: 'Ovarzil', manufacturer: {id: 6, name: 'Hemofarm'}, price: '53', expiryDate: '01-08-2022', id: 6 },
+    {name: 'Propolis', manufacturer: {id: 7, name: 'Moderna'}, price: '23', expiryDate: '11-08-2024', id: 7 }
 
 
   ])
@@ -31,6 +31,8 @@ export default function App() {
   }
 
   const addProduct = (prod) => {
+    prod.id = Math.floor(Math.random()*(10000-10)-10);
+    prod.manufacturer.id = Math.floor(Math.random()*(10000-10)-10);
     //console.log(prod);
     setProducts([...products, prod])
   }

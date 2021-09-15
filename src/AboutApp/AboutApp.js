@@ -11,10 +11,10 @@ export default function AboutApp() {
                         <div className="col-10 offset-1 ">
                             <p className='lead '>
                                 On this application you can see a list of currently available medicaments.
-                                You can also delete, edit some medicament and add on the list.
+                                You can also delete, edit some medicament and add new on the list.
                             </p>
                             <p className='lead '>
-                                Application also have a chart of medicaments. You can see the most expensive products
+                                Application have a chart of medicaments. You can see the most expensive products
                                 and you can see the company with the most medicaments on the list.
                             </p>
                             <p className='lead '>
